@@ -2,9 +2,17 @@
 
 /* #ff7360 and #34d4ae */
 
-.html, .body {
-  position: static;
+.big-container {
+  text-align: center;
+  width:100%;
 }
+
+.container-fluid {
+  margin: 0 auto 5% auto;
+  max-width: max(70%, 900px);
+  text-align: left;
+}
+
 .form-check-label {
   font-size: 18px !important;
   color: #ff7360 !important;
@@ -160,29 +168,28 @@ object {
 }
 
 #subHead {
-  font-size: 3vw;
+  font-size: min(3vw, 32px);
   color: #25b391;
 }
 
 @media only screen and (min-width: 1400px) {
-  .container-fluid {
-    width: 1400px;
-    margin: auto;
-  }
-
   #subHead {
     font-size: 2vw;
   }
 }
-@media only screen and (max-width: 765px) {
+@media only screen and (max-width: 600px) {
   #contacts p {
     font-size: x-small
   }
 
-  /* hide video
+  /* hide video */
   iframe {
     display: none;
-  } */
+  }
+
+  .filterByDorm {
+    display: none;
+  }
 
   .btn {
     font-size:small;

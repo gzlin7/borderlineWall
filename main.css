@@ -1,14 +1,79 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
+/* #ff7360 and #34d4ae */
+
+.html, .body {
+  position: static;
+}
+.form-check-label {
+  font-size: 18px !important;
+  color: #ff7360 !important;
+}
+.form-check-input:checked {
+  background-color:#ff7360 !important;
+  border-color: #ff7360 !important;
+}
+
+.form-switch {
+  padding: 16px !important;
+  flex-basis: auto;
+}
+.flex-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+/* .btn-check:checked {
+
+} */
 h4 {
-  color: rgb(177, 0, 0);
+  color: #ff7360;
   font-size: 4vw;
+  margin-bottom: 5%;
 }
 
 img {
   width: 100%;
 }
 
+i {
+  color: #25b391;
+}
+
+i:hover {
+  color: #ff7360;
+  transition-duration: 0.3s;
+}
+
+.logo, .fa {
+  width: 3em;
+}
+
+.btn {
+  width: 100%;
+  background-color: #25b391;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.btn:hover {
+  width: 100%;
+  background-color: #ff7360;
+  transition-duration: 0.3s;
+  color: white;
+}
+
+.filterByDorm {
+  background-color: #ff7360 !important;
+}
+
+.filterByDorm:hover {
+  background-color: #25b391 !important;
+}
+
+.background {
+  background-color:rgba(255, 255, 255, 0.733);
+}
 object {
   width: 100%;
   height: calc(65vh);
@@ -23,7 +88,27 @@ object {
   position: middle;
   display: inline-block;
 }
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 18px;
+}
 
+.youtube {
+  flex-grow: 2;
+  flex-basis: max-content;
+  padding: 0 16px;
+}
+
+.popups {
+  flex-basis: min-content;
+  flex-grow: 1;
+}
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .icon {
   text-align: center;
   width: 24px;
@@ -32,6 +117,8 @@ object {
 
 .row {
   text-align: center;
+  height: max-content;
+  text-align: left;
 }
 
 .modal-dialog {
@@ -50,10 +137,12 @@ object {
 }
 
 #room0 {
-  position: relative;
+  /* position: relative; */
   max-height: calc(100vh - 100px);
 }
-
+.frontPage {
+  position: relative;
+}
 #contacts {
   position: absolute;
   top: 5%;
@@ -63,7 +152,7 @@ object {
 
 #desc {
   position: absolute;
-  top: 3%;
+  top: 5%;
   left: 28%;
   width: 65%;
   background: rgba(255, 255, 255, 0.9);
@@ -72,4 +161,35 @@ object {
 
 #subHead {
   font-size: 3vw;
+  color: #25b391;
+}
+
+@media only screen and (min-width: 1400px) {
+  .container-fluid {
+    width: 1400px;
+    margin: auto;
+  }
+
+  #subHead {
+    font-size: 2vw;
+  }
+}
+@media only screen and (max-width: 765px) {
+  #contacts p {
+    font-size: x-small
+  }
+
+  /* hide video
+  iframe {
+    display: none;
+  } */
+
+  .btn {
+    font-size:small;
+    padding: 5px;
+  }
+
+  #desc {
+    height: 30%;
+  }
 }
